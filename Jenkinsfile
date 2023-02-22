@@ -20,7 +20,13 @@ pipeline{
                 sh "npm test"
             }
         }
-
-        // Add the Release stage here
+	stage('Releasel) {
+	    steps {
+		sh '''
+		    oc project gnjwlp-greetings
+		    oc start-build greeting-console --follow --eait
+		'''
+	    } 
+	}
     }
 }
