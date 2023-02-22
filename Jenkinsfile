@@ -20,7 +20,7 @@ pipeline{
                 sh "npm test"
             }
         }
-	stage('Releasel) {
+	stage('Release') {
 	    steps {
 		sh '''
 		    oc project gnjwlp-greetings
