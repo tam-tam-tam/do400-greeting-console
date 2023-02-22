@@ -24,7 +24,7 @@ pipeline{
 	    steps {
 		sh '''
 		    oc project gnjwlp-greetings
-		    oc start-build greeting-console --follow --eait
+		    oc start-build greeting-console --follow --wait
 		'''
 	    } 
 	}
